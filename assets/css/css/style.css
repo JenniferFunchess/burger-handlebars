@@ -1,0 +1,108 @@
+body {
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  background: url("https://www.seriouseats.com/recipes/images/2017/06/20170617-bulgogi-burger-matt-clifton-1-1500x1125.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: center;
+}
+
+header {
+  background: #333;
+  margin: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-bottom-left-radius: 8px solid rgb(37, 192, 212);
+}
+
+h1 {
+  margin: 0 0 0 100px;
+  color: #fff;
+  font-size: 30px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+span {
+  font-size: 0.85em;
+  background: #b31b1b;
+  color: white;
+  padding: 3px 5px 3px 5px;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+button {
+  display: inline;
+}
+
+.devour-burger-form {
+  display: inline;
+}
+
+#burgers-container {
+  display: flex;
+}
+
+#burgers-available {
+  flex-grow: 1;
+  padding: 0.5em 2em 1.7em 2em;
+  background: rgb(37, 192, 212);
+  margin: 1em 1em 1em 0;
+}
+
+#burgers-devoured {
+  flex-grow: 1;
+  background: #333;
+  padding: 0.5em 2em 1.7em 2em;
+  margin: 1em 0 1em 1em;
+}
+
+#burgers-devoured h2,
+#burgers-devoured div {
+  color: #ddd;
+}
+
+.wrapper {
+  max-width: 67%;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+#create-burger {
+  display: flex;
+  justify-content: center;
+  padding-top: 55px;
+  padding-bottom: 40px;
+}
+
+.burger {
+  line-height: 2;
+}
+
+.eat-btn {
+  margin-right: 0.7em;
+  padding: 5px;
+}
+
+#submit-btn {
+  padding: 0.57em 1em 0.57em 1em;
+  font-size: 1.5em;
+  background: rgb(60, 199, 192);
+  border: none;
+  margin-left: -5px;
+}
+
+#burger-name {
+  padding: 0.5em 1em 0.5em 1em;
+  font-size: 1.5em;
+}

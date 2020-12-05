@@ -1,38 +1,40 @@
-<h1>Burgers!</h1>
+<header>
+    <h1><img src="https://images.vexels.com/media/users/3/152411/isolated/preview/4a22d435331dde73ae0f1cebbdbaacff-double-burger-icon-by-vexels.png"
+            alt="icon" style=" height: 30px; width: 30px;">Eat Da Burger!</h1>
+</header><!-- /header -->
+<br>
+<img src="http://www.myiconfinder.com/uploads/iconsets/256-256-b030adac9955cf87d7abe3e5f2106d90.png" alt="icon"
+    style=" height: 125px; width: 125px;" class="center">
 
-<h2>Look at all of these burgers!</h2>
-
-<ul>
-    {{#each cats}}
-    {{#unless sleepy}}
-    {{> cats/cat-block sleep=true}}
-    {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>Cats that are sleepy!</h2>
-
-<ul>
-    {{#each cats}}
-    {{#if sleepy}}
-    {{> cats/cat-block sleep=false}}
-    {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="ca">Burger Name:</label>
-        <input type="text" id="ca" name="name">
+<div class="wrapper">
+    <div id="create-burger">
+        <form action="/" method="POST">
+            <input id="burger-name" type="text" name="burger_name" placeholder="Create a burger">
+            <button id="submit-btn" type="submit">Create</button>
+        </form>
     </div>
 
-    <div class="form-group">
-        <label for="sleepy">Devoured?</label><br>
-        <input type="radio" name="sleepy" value="1" checked> Eaten!<br>
-        <input type="radio" name="sleepy" value="0"> Not eaten!
-    </div>
-
-    <button type="submit">Add Burger</button>
-</form>
+    <section id="burgers-container">
+        <div id="burgers-available">
+            <h2>Burgers Available</h2>
+            {{#each burgers}}
+            {{#unless this.devoured}}
+            <div class="burger">
+                <form class="devour-burger-form" action="/{{id}}?_method=PUT" method="POST">
+                    <button class="eat-btn">Devour It!</button>
+                </form>
+                {{burger_name}} <span>#{{id}}</span>
+            </div>
+            {{/unless}}
+            {{/each}}
+        </div>
+        <div id="burgers-devoured">
+            <h2>Devoured Burgres</h2>
+            {{#each burgers}}
+            {{#if this.devoured}}
+            <div class="burger">{{burger_name}} <span>#{{id}}</span></div>
+            {{/if}}
+            {{/each}}
+        </div>
+    </section>
+</div>
