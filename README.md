@@ -8,7 +8,7 @@ In this assignment, I have created a burger logger with MySQL, Node, Express, Ha
 
 ## Demo
 
-Eat Da Burger is deployed to Heroku. Please check it out here: .
+Eat Da Burger is deployed to Heroku. Please check it out here: https://young-falls-93196.herokuapp.com.
 
 ## Installation
 
